@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Student Form</title>
+
+    <style>
+        /* ===== Background ===== */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+           
+            justify-content: center;
+            align-items: center;
+
+            font-family: "Poppins", sans-serif;
+
+            background: linear-gradient(135deg, #500781, #f8fafd, #6a11cb, #dee4f0);
+            background-size: 400% 400%;
+            animation: bgMove 12s infinite alternate ease-in-out;
+        }
+
+        @keyframes bgMove {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 100% 100%; }
+        }
+
+        /* ===== PREMIUM GLASS FORM ===== */
+        .form-box {
+            width: 430px;
+            max-width: 90%;
+            padding: 35px;
+            margin: auto;
+            margin-top: 25px;
+            margin-bottom: 25px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 22px;
+            backdrop-filter: blur(18px);
+
+            border: 2px solid rgba(255,255,255,0.25);
+            box-shadow: 0 0 35px rgba(255,255,255,0.2),
+                        0 0 55px rgba(0,0,0,0.3);
+
+            animation: float 6s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-12px) scale(1.02); }
+            100% { transform: translateY(0) scale(1); }
+        }
+
+        .form-box h2 {
+            text-align: center;
+            color: #fff;
+            font-size: 32px;
+            margin-bottom: 25px;
+            text-shadow: 0 0 15px rgba(255,255,255,0.7);
+        }
+
+        /* ===== Inputs ===== */
+        label {
+            color: #fff;
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 18px;
+
+            font-size: 16px;
+            color: #fff;
+
+            border-radius: 14px;
+            border: 1px solid rgba(255,255,255,0.35);
+            background: rgba(255,255,255,0.15);
+
+            outline: none;
+            transition: 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        input::placeholder {
+            color: #ededed;
+        }
+
+        input:focus {
+            background: rgba(255,255,255,0.25);
+            border-color: #fff;
+            box-shadow: 0 0 12px rgba(255,255,255,0.8);
+        }
+
+        /* ===== Buttons ===== */
+        .btn-group {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        button {
+            flex: 1;
+            padding: 12px;
+            border-radius: 12px;
+            border: none;
+            font-size: 17px;
+            font-weight: 700;
+            color: white;
+            cursor: pointer;
+            transition: .3s ease;
+            letter-spacing: 1px;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #00ff85, #00e676);
+            box-shadow: 0 0 18px rgba(0,255,133,0.6);
+        }
+
+        .submit-btn:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 25px rgba(0,255,133,1);
+        }
+
+        .reset-btn {
+            background: linear-gradient(135deg, #2196f3, #2979ff);
+            box-shadow: 0 0 18px rgba(41,121,255,0.6);
+        }
+
+        .reset-btn:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 25px rgba(41,121,255,1);
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 480px) {
+            .form-box {
+                padding: 25px;
+            }
+
+            .form-box h2 {
+                font-size: 26px;
+            }
+
+            input {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            button {
+                font-size: 15px;
+                padding: 10px;
+            }
+        }
+    </style>
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">
+        <img src="./image/image.webp" alt="Logo">
+    </div>
+
+    <!-- MOBILE TOGGLE -->
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <!-- NAV LINKS -->
+    <ul class="nav-links">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./About.html">About</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./registration.html">Register</a></li>
+        <li><a href="./login.html">Login</a></li>
+    </ul>
+</nav>
+    <div class="form-box">
+        <h2>Student Form</h2>
+
+        <form>
+            <label>Student Name</label>
+            <input type="text" placeholder="Enter Name" required>
+
+            <label>Father Name</label>
+            <input type="text" placeholder="Enter Father Name" required>
+
+            <label>Email</label>
+            <input type="email" placeholder="Enter Email" required>
+
+            <label>Mobile Number</label>
+            <input type="number" placeholder="Enter Mobile Number" required>
+
+            <div class="btn-group">
+                <button type="submit" class="submit-btn">SUBMIT</button>
+                <button type="reset" class="reset-btn">RESET</button>
+            </div>
+        </form>
+    </div>
+<!-- FOOTER -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-box">
+            <h2>Contact</h2>
+            <p>Phone: 8400645242</p>
+            <p>Email: nm3456008@gmail.com</p>
+        </div>
+        <div class="footer-box">
+            <img src="./image/neha.jpg" alt="Developer">
+            <h2>Developed by</h2>
+            <p>Neha Maurya</p>
+        </div>
+        <div class="footer-box">
+            <h2>Address</h2>
+            <p>JS PVT. ITI, Palahi Patti, Varanasi</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
