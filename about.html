@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JS ITI Palahi Patti Varanasi</title>
+<style>
+    /* Base Styles */
+    body {
+        background-color: #f1d4d4;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul {
+        padding-left: 0;
+        list-style: none;
+    }
+
+    /* About Section */
+    .about-section {
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .about-section h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+
+    .about-section h2.h {
+        text-transform: uppercase;
+        text-decoration: underline;
+        color: rgba(255, 0, 0, 0.8);
+        margin-bottom: 20px;
+    }
+
+    .about-section ul li {
+        font-size: 18px;
+        margin: 10px 0;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Container */
+    .container {
+        max-width: 1100px;
+        margin: auto;
+        padding: 40px 20px;
+    }
+
+    .container h2 {
+        color: #333;
+        margin-top: 40px;
+        border-left: 5px solid #0099ff;
+        padding-left: 10px;
+    }
+
+    .aboutbox1 {
+        background: white;
+        padding: 25px;
+        border-radius: 10px;
+        margin: 20px 0;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Courses Box */
+    .courses-box {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    .courses-box div {
+        background-color: white;
+        flex: 1 1 250px; /* Responsive flex */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+        text-transform: capitalize;
+    }
+
+    .courses-box div h3 {
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+    }
+
+    .courses-box div ul li {
+        margin: 8px 0;
+        font-size: 16px;
+    }
+
+    /* Footer line */
+    .footer-line {
+        height: 4px;
+        background: #0099ff;
+        width: 200px;
+        margin: 40px auto 0;
+    }
+
+    /* Responsive Media Queries */
+    @media (max-width: 1024px) {
+        .about-section h1 {
+            font-size: 2rem;
+        }
+
+        .container h2 {
+            font-size: 1.5rem;
+        }
+
+        .courses-box {
+            flex-direction: column;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .about-section {
+            padding: 40px 10px;
+        }
+
+        .about-section ul li {
+            font-size: 16px;
+        }
+
+        .courses-box div {
+            flex: 1 1 100%;
+        }
+    }
+</style>
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+    <!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">
+        <img src="./image/image.webp" alt="Logo">
+    </div>
+
+    <!-- MOBILE TOGGLE -->
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <!-- NAV LINKS -->
+    <ul class="nav-links">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./About.html">About</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./registration.html">Register</a></li>
+        <li><a href="./login.html">Login</a></li>
+    </ul>
+</nav>
+
+<div class="about-section">
+    <h1>About JS ITI Palahi Patti Varanasi</h1>
+    <h2 class="h">Our Mission</h2>
+    <ul>
+        <li>To provide excellent vocational education & industrial training</li>
+        <li>To prepare students for government and private sector jobs</li>
+        <li>To promote skill development and self-employment</li>
+        <li>To develop professionally trained manpower for industries</li>
+    </ul>
+</div>
+
+<div class="container">
+    <div class="aboutbox1">
+        <h2>Why Choose JS ITI</h2>
+        <ul>
+            <li>Experienced and qualified trainers</li>
+            <li>Practical and industry-oriented training</li>
+            <li>Well-equipped labs and computer classrooms</li>
+            <li>Personality development and soft skills training</li>
+            <li>Placement assistance and career guidance</li>
+        </ul>
+    </div>
+
+    <h2>Course Offered</h2>
+    <div class="courses-box">
+        <div>
+            <h3>COPA (Computer Operator and Programming Assistant)</h3>
+            <ul>
+                <li>Basics of computer & MS Office</li>
+                <li>Web designing (HTML, CSS)</li>
+                <li>Networking fundamentals</li>
+                <li>Internet & email</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Electrician</h3>
+            <ul>
+                <li>Electrical wiring & installation</li>
+                <li>Motors and transformers</li>
+                <li>Safety & measuring instruments</li>
+                <li>Commercial & residential electrical work</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Fitter</h3>
+            <ul>
+                <li>Tools & fittings</li>
+                <li>Welding basics</li>
+                <li>Drilling, grinding, cutting</li>
+                <li>Machinery installation & maintenance</li>
+                <li>Engineering drawing</li>
+                <li>Measurement tools (Vernier, Micrometer)</li>
+                <li>Safety practices</li>
+            </ul>
+        </div>
+        <div>
+            <h3>FDT</h3>
+            <ul>
+                <li>Fashion Design Fundamentals</li>
+                <li>Textile & Fabric Knowledge</li>
+                <li>Pattern Making & Draping</li>
+                <li>Garment Construction & Sewing</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-line"></div>
+</div>
+<footer>
+    <div class="footer-container">
+        <div class="footer-box">
+            <h2>Contact</h2>
+            <p>Phone: 8400645242</p>
+            <p>Email: nm3456008@gmail.com</p>
+        </div>
+        <div class="footer-box">
+            <img src="./image/neha.jpg" alt="Developer">
+            <h2>Developed by</h2>
+            <p>Neha Maurya</p>
+        </div>
+        <div class="footer-box">
+            <h2>Address</h2>
+            <p>JS PVT. ITI, Palahi Patti, Varanasi</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

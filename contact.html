@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>contact</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        background: #a367e9;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    /* Main content */
+    .main {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 120px 20px 80px;
+        margin-top: 5px;
+    }
+
+    .card {
+        display: flex;
+        gap: 40px;
+        background: #fff;
+        border-radius: 12px;
+        padding: 30px 40px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        max-width: 900px;
+        width: 100%;
+        flex-wrap: wrap; /* allows wrapping on smaller screens */
+    }
+
+    /* Questions box on left */
+    .questions-box {
+        flex: 1;
+        background: peachpuff;
+        border-radius: 12px;
+        padding: 20px;
+        min-width: 250px;
+        color: #8b5300;
+    }
+
+    .questions-box h2 {
+        margin-bottom: 15px;
+    }
+
+    .questions-box ul {
+        list-style: none;
+    }
+
+    .questions-box ul li {
+        margin: 12px 0;
+        font-weight: 500;
+        position: relative;
+        padding-left: 25px;
+        color: #555;
+    }
+
+    .questions-box ul li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #6a0dad;
+        font-size: 20px;
+    }
+
+    /* Contact form on right */
+    .contactbox {
+        flex: 2;
+        min-width: 300px;
+    }
+
+    .what {
+        margin-bottom: 20px;
+        color: #f71313;
+    }
+
+    .contact-form .input-group {
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-form label {
+        margin-bottom: 5px;
+        font-weight: 500;
+        color: #555;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+        border: 1px solid #ddd;
+        padding: 12px 15px;
+        font-size: 15px;
+        border-radius: 8px;
+        transition: 0.3s;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus,
+    .contact-form select:focus {
+        border-color: #6a0dad;
+        box-shadow: 0 0 8px rgba(106,13,173,0.2);
+        outline: none;
+    }
+
+    .contact-form textarea {
+        min-height: 100px;
+        resize: vertical;
+    }
+
+    .btn {
+        background: linear-gradient(90deg,#6a0dad,#8e44ad);
+        color: #fff;
+        border-radius: 8px;
+        padding: 12px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: 0.3s ease;
+        border: none;
+        width: 100%;
+    }
+
+    .btn:hover {
+        opacity: 0.9;
+        transform: translateY(-2px);
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 900px) {
+        .card {
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .questions-box, .contactbox {
+            min-width: 100%;
+        }
+
+        .questions-box {
+            margin-bottom: 20px;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .main {
+            padding: 60px 15px 40px;
+        }
+
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            padding: 10px 12px;
+            font-size: 14px;
+        }
+
+        .btn {
+            padding: 10px;
+            font-size: 14px;
+        }
+    }
+</style>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+   <!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">
+        <img src="./image/image.webp" alt="Logo">
+    </div>
+
+    <!-- MOBILE TOGGLE -->
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <!-- NAV LINKS -->
+    <ul class="nav-links">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./About.html">About</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./registration.html">Register</a></li>
+        <li><a href="./login.html">Login</a></li>
+    </ul>
+</nav>
+ 
+<!-- Main Content -->
+<div class="main">
+    <div class="card">
+        <!-- Questions Box (Left) -->
+        <div class="questions-box">
+            <h2 class="what">What can you ask?</h2>
+            <ul>
+                <li>Admission Process</li>
+                <li>Courses Offered</li>
+                <li>Fee Structure</li>
+                <li>Other Queries</li>
+            </ul>
+        </div>
+
+        <!-- Contact Form (Right) -->
+        <div class="contactbox">
+            <h2>Contact Us</h2>
+            <form action="#" method="post" class="contact-form">
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Enter your name" required>
+                </div>
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <label>What can you ask?</label>
+                    <select required>
+                        <option value="" disabled selected>Select your question</option>
+                        <option value="1">Admission Process</option>
+                        <option value="2">Courses Offered</option>
+                        <option value="3">Fee Structure</option>
+                        <option value="4">Other Queries</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Message</label>
+                    <textarea placeholder="Write your message..." required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- FOOTER -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-box">
+            <h2>Contact</h2>
+            <p>Phone: 8400645242</p>
+            <p>Email: nm3456008@gmail.com</p>
+        </div>
+        <div class="footer-box">
+            <img src="./image/neha.jpg" alt="Developer">
+            <h2>Developed by</h2>
+            <p>Neha Maurya</p>
+        </div>
+        <div class="footer-box">
+            <h2>Address</h2>
+            <p>JS PVT.ITI, Palahi Patti, Varanasi</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
